@@ -14,28 +14,35 @@ public class MainController {
     //(@RequestParam("number") int number) {
     {
 
-        int urlNum = 13;
+        int urlNum = 20;
         int evenNum = 0;
-        int listOfNums = 0;
+        int storedNum = 0;
+        String listOfNums = "";
 
-        while (urlNum > 0) {
-            if ((Integer.valueOf(urlNum) % 2 == 0)) {
-                listOfNums = urlNum / 2;
-            } else if (Integer.valueOf(urlNum) % 2 != 0) {
-                listOfNums = (urlNum * 3) + 1;
+        do {
+
+            if ((urlNum % 2 == 0)) {
+                storedNum = urlNum / 2;
+                listOfNums +=urlNum;
+            } else if (urlNum % 2 != 0) {
+                storedNum = (urlNum * 3) + 1;
             }
 
-            
-            }
             //System.out.println(number);
             //return String.valueOf(number);
 
+
             System.out.println();
-            return String.valueOf(listOfNums);
+            return String.valueOf(storedNum) + "<br/>" + listOfNums;
 
 
+
+        } while (storedNum == 1) ;
 
 
     }
 
+
 }
+
+
