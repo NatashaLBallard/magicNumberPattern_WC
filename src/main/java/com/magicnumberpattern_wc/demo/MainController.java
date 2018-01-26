@@ -23,9 +23,10 @@ public class MainController {
 
             if ((urlNum % 2 == 0)) {
                 storedNum = urlNum / 2;
-                listOfNums +=urlNum;
+                listOfNums = urlNum + "  " +  String.valueOf(storedNum);
             } else if (urlNum % 2 != 0) {
                 storedNum = (urlNum * 3) + 1;
+                listOfNums = urlNum + "  " + String.valueOf(storedNum);
             }
 
             //System.out.println(number);
@@ -33,11 +34,11 @@ public class MainController {
 
 
             System.out.println();
-            return String.valueOf(storedNum) + "<br/>" + listOfNums;
+            return //String.valueOf(storedNum) + "<br/>" +
+             listOfNums;
 
 
-
-        } while (storedNum == 1) ;
+        } while (storedNum != 1) ;
 
 
     }
