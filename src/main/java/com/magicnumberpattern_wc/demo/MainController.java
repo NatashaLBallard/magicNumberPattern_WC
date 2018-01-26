@@ -38,7 +38,7 @@ public class MainController {
             } while (urlNum != 1);
 
             System.out.println();
-            return number + " " + listOfNums;
+            return "<b>" + "Starting Number: " + "</b>"+ number +"<br>" + number + " " + listOfNums;
         }
 
 
